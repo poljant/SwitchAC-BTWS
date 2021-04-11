@@ -1,0 +1,9 @@
+(sym_lib_table
+  (lib (name w_connectors)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/w_connectors.lib)(options "")(descr ""))
+  (lib (name moje)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/moje.lib)(options "")(descr ""))
+  (lib (name conn)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/conn.lib)(options "")(descr ""))
+  (lib (name device)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/device.lib)(options "")(descr ""))
+  (lib (name ESP8266)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/ESP8266.lib)(options "")(descr ""))
+  (lib (name Rozne)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/Rozne.lib)(options "")(descr ""))
+  (lib (name ESP_12F-rescue)(type Legacy)(uri ${KIPRJMOD}/ESP_12F-rescue.lib)(options "")(descr ""))
+)

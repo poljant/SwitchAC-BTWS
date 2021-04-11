@@ -1,0 +1,290 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ESP_12F-rescue:ESP8266_ESP-12E-MU-02-cache U1
+U 1 1 5D9CA756
+P 5750 3450
+F 0 "U1" H 5750 4215 50  0000 C CNN
+F 1 "ESP8266_ESP-12E" H 5750 4124 50  0000 C CNN
+F 2 "ESP8266:ESP-12E" H 5750 3450 50  0001 C CNN
+F 3 "" H 5750 3450 50  0001 C CNN
+	1    5750 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:R R2
+U 1 1 5D9D9DB0
+P 4650 2750
+F 0 "R2" H 4582 2704 50  0000 R CNN
+F 1 "10k" H 4582 2795 50  0000 R CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 4650 2750 50  0001 C CNN
+F 3 "" H 4650 2750 50  0001 C CNN
+	1    4650 2750
+	-1   0    0    1   
+$EndComp
+$Comp
+L pspice:R R1
+U 1 1 5D9D9DE3
+P 4400 2750
+F 0 "R1" H 4332 2704 50  0000 R CNN
+F 1 "10k" H 4332 2795 50  0000 R CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 4400 2750 50  0001 C CNN
+F 3 "" H 4400 2750 50  0001 C CNN
+	1    4400 2750
+	-1   0    0    1   
+$EndComp
+$Comp
+L pspice:R R4
+U 1 1 5D9D9DFD
+P 7100 4200
+F 0 "R4" H 7032 4154 50  0000 R CNN
+F 1 "10k" H 7032 4245 50  0000 R CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 7100 4200 50  0001 C CNN
+F 3 "" H 7100 4200 50  0001 C CNN
+	1    7100 4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L pspice:R R3
+U 1 1 5D9D9E65
+P 7100 2850
+F 0 "R3" H 7032 2804 50  0000 R CNN
+F 1 "10k" H 7032 2895 50  0000 R CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 7100 2850 50  0001 C CNN
+F 3 "" H 7100 2850 50  0001 C CNN
+	1    7100 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L pspice:C C1
+U 1 1 5D9D9EC3
+P 4650 4200
+F 0 "C1" H 4828 4246 50  0000 L CNN
+F 1 "100nF" H 4828 4155 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 4650 4200 50  0001 C CNN
+F 3 "" H 4650 4200 50  0001 C CNN
+	1    4650 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 3000 4650 3150
+Wire Wire Line
+	4650 3150 4850 3150
+Wire Wire Line
+	4400 3000 4400 3350
+Wire Wire Line
+	4400 3350 4850 3350
+Wire Wire Line
+	6650 3550 7100 3550
+Wire Wire Line
+	6650 3750 7100 3750
+Wire Wire Line
+	7100 3750 7100 3950
+Wire Wire Line
+	4650 4450 4650 4650
+Wire Wire Line
+	4650 4650 6750 4650
+Wire Wire Line
+	7100 4650 7100 4450
+Wire Wire Line
+	6650 3850 6750 3850
+Connection ~ 6750 4650
+Wire Wire Line
+	6750 4650 7100 4650
+$Comp
+L power:+3.3V #PWR01
+U 1 1 5D9DA23F
+P 4150 2450
+F 0 "#PWR01" H 4150 2300 50  0001 C CNN
+F 1 "+3.3V" H 4165 2623 50  0000 C CNN
+F 2 "" H 4150 2450 50  0001 C CNN
+F 3 "" H 4150 2450 50  0001 C CNN
+	1    4150 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5D9DA26C
+P 7850 2600
+F 0 "#FLG01" H 7850 2675 50  0001 C CNN
+F 1 "PWR_FLAG" H 7850 2774 50  0000 C CNN
+F 2 "" H 7850 2600 50  0001 C CNN
+F 3 "" H 7850 2600 50  0001 C CNN
+	1    7850 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5D9DA28A
+P 8450 2550
+F 0 "#FLG02" H 8450 2625 50  0001 C CNN
+F 1 "PWR_FLAG" H 8450 2724 50  0000 C CNN
+F 2 "" H 8450 2550 50  0001 C CNN
+F 3 "" H 8450 2550 50  0001 C CNN
+	1    8450 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5D9DA2BE
+P 6750 4850
+F 0 "#PWR02" H 6750 4600 50  0001 C CNN
+F 1 "GND" H 6755 4677 50  0000 C CNN
+F 2 "" H 6750 4850 50  0001 C CNN
+F 3 "" H 6750 4850 50  0001 C CNN
+	1    6750 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5D9DA2DC
+P 8450 2950
+F 0 "#PWR04" H 8450 2700 50  0001 C CNN
+F 1 "GND" H 8455 2777 50  0000 C CNN
+F 2 "" H 8450 2950 50  0001 C CNN
+F 3 "" H 8450 2950 50  0001 C CNN
+	1    8450 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR03
+U 1 1 5D9DA2F3
+P 7850 2950
+F 0 "#PWR03" H 7850 2800 50  0001 C CNN
+F 1 "+3.3V" H 7865 3123 50  0000 C CNN
+F 2 "" H 7850 2950 50  0001 C CNN
+F 3 "" H 7850 2950 50  0001 C CNN
+	1    7850 2950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4850 3850 4650 3850
+Wire Wire Line
+	4650 3850 4650 3950
+Wire Wire Line
+	4650 3850 4150 3850
+Wire Wire Line
+	4150 2500 4400 2500
+Connection ~ 4650 3850
+Wire Wire Line
+	4150 2450 4150 2500
+Connection ~ 4150 2500
+Wire Wire Line
+	4400 2500 4650 2500
+Connection ~ 4400 2500
+Wire Wire Line
+	7850 2950 7850 2600
+Wire Wire Line
+	8450 2950 8450 2550
+Connection ~ 4650 2500
+Connection ~ 7100 3750
+Wire Wire Line
+	6750 4850 6750 4650
+NoConn ~ 6650 3350
+NoConn ~ 4850 3750
+NoConn ~ 4850 3650
+NoConn ~ 4850 3550
+NoConn ~ 4850 3450
+NoConn ~ 4850 3250
+NoConn ~ 5500 4350
+NoConn ~ 5600 4350
+NoConn ~ 5700 4350
+NoConn ~ 5800 4350
+NoConn ~ 5900 4350
+NoConn ~ 6000 4350
+Wire Wire Line
+	4650 2500 7100 2500
+Wire Wire Line
+	4150 2500 4150 3850
+Wire Wire Line
+	7100 3100 7100 3550
+Wire Wire Line
+	7100 2600 7100 2500
+Wire Wire Line
+	6750 4650 6750 3850
+$Comp
+L ESP_12F-rescue:Conn_01x05_Female-conn J1
+U 1 1 5D9F47F1
+P 7700 3650
+F 0 "J1" H 7550 3350 50  0000 L CNN
+F 1 "Conn1" H 7500 3250 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 7700 3650 50  0001 C CNN
+F 3 "~" H 7700 3650 50  0001 C CNN
+	1    7700 3650
+	1    0    0    -1  
+$EndComp
+Connection ~ 6750 3850
+Wire Wire Line
+	6750 3850 7500 3850
+Wire Wire Line
+	7100 3750 7500 3750
+Wire Wire Line
+	7500 3450 7400 3450
+Wire Wire Line
+	7400 3450 7400 2500
+Wire Wire Line
+	7400 2500 7100 2500
+Connection ~ 7100 2500
+Text Notes 7800 3450 0    50   ~ 0
++3.3V
+Text Notes 7800 3650 0    50   ~ 0
+Button
+Text Notes 7800 3750 0    50   ~ 0
+Relay
+Text Notes 7800 3550 0    50   ~ 0
+1-Wire
+Text Notes 7800 3850 0    50   ~ 0
+GND
+$Comp
+L ESP_12F-rescue:Conn_01x02_Male-conn J2
+U 1 1 5D9F920B
+P 8050 4500
+F 0 "J2" H 8022 4380 50  0000 R CNN
+F 1 "TxRx" H 8022 4471 50  0000 R CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 8050 4500 50  0001 C CNN
+F 3 "~" H 8050 4500 50  0001 C CNN
+	1    8050 4500
+	-1   0    0    1   
+$EndComp
+Text GLabel 6750 3150 2    50   Input ~ 0
+Tx
+Text GLabel 6750 3250 2    50   Input ~ 0
+Rx
+Text GLabel 7700 4400 0    50   Input ~ 0
+Tx
+Text GLabel 7700 4500 0    50   Input ~ 0
+Rx
+Wire Wire Line
+	7850 4400 7700 4400
+Wire Wire Line
+	7850 4500 7700 4500
+Wire Wire Line
+	6650 3150 6750 3150
+Wire Wire Line
+	6650 3250 6750 3250
+NoConn ~ 6650 3650
+Wire Wire Line
+	7500 3650 7100 3650
+Wire Wire Line
+	7100 3650 7100 3550
+Connection ~ 7100 3550
+Wire Wire Line
+	7250 3450 7250 3550
+Wire Wire Line
+	7250 3550 7500 3550
+Wire Wire Line
+	6650 3450 7250 3450
+$EndSCHEMATC

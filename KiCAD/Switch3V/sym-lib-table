@@ -1,0 +1,8 @@
+(sym_lib_table
+  (lib (name transistors)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/transistors.lib)(options "")(descr ""))
+  (lib (name Device)(type Legacy)(uri /home/jant/KiCAD/kicad-symbols-master/Device.lib)(options "")(descr ""))
+  (lib (name conn)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/conn.lib)(options "")(descr ""))
+  (lib (name Rozne)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/Rozne.lib)(options "")(descr ""))
+  (lib (name switches)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/switches.lib)(options "")(descr ""))
+  (lib (name Switch3V-rescue)(type Legacy)(uri ${KIPRJMOD}/Switch3V-rescue.lib)(options "")(descr ""))
+)
