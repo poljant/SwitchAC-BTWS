@@ -7,7 +7,7 @@
 
 #ifndef SWITCHAC_BTWS_SWITCHAC_BTWS_H__
 #define SWITCHAC_BTWS_SWITCHAC_BTWS_H__
-#define VERSION "0.2"
+#define VERSION "0.3"
 
 #define POLISH
 //#define LOCATION "Saloon"
@@ -26,16 +26,16 @@
 #define WEBPAGESWITCH
 //set static IP ( no DHCP)
 // set IP in file SwitcherAC-BTWS.ino (lines 43 - 45)
-#define IP_STATIC
+//#define IP_STATIC
 
 //add manual button
 #define BUTTON
 //title you web page
-#define HOSTNAME "SwitchAC-BTWS"
+#define HOSTNAME "SwitchAC"
 //Thermometer
-#define THERMOMETER
+//#define THERMOMETER
 //add WebPage WiFi scan
-//#define WEBPAGEWIFISCAN
+#define WEBPAGEWIFISCAN
 
 
 #endif //SWITCHAC_BTWS_SWITCHAC_BTWS_H__

@@ -74,6 +74,8 @@ int ap_channel = 7; //numer kanału dla AP
 void WiFiconnect(void) {
 
 	WiFi.mode(WIFI_AP_STA);
+	//WiFi.begin(ap_ssid, ap_pass, ap_channel);
+
 #ifdef IP_STATIC
 		WiFi.config(IPadr, gateway, netmask);
 		WiFi.begin(myssid, mypass);
@@ -87,7 +89,7 @@ void WiFiconnect(void) {
 		i += 1;
 		Serial.print(".");
 	}
-	if (i>=0){
+	if (WiFi.status() == WL_CONNECTED){
 	Serial.println("");
 	Serial.print(F("WiFi connected. IP "));
 	Serial.println(WiFi.localIP());          // IP server
@@ -104,11 +106,11 @@ void WiFiconnect(void) {
 ///////////////////////////////////////////
 String hostname(void) {
 	uint32_t chipId = ESP.getChipId();
-	char uid[12];
-	sprintf_P(uid, PSTR("%s%02x%02x"), HOSTNAME,
-	//        (uint16_t) ((chipId >> 16) & 0xff),
-			(uint16_t) ((chipId >> 8) & 0xff), (uint16_t) chipId & 0xff);
-
+	char uid[20];
+	sprintf_P(uid, PSTR("%s_%02x%02x%02x"), HOSTNAME,
+	        (uint16_t) ((chipId >> 16) & 0xff),
+			(uint16_t) ((chipId >> 8) & 0xff), ((uint16_t) chipId & 0xff));
+//	Serial.println(uid);
 	return String(uid);
 }
 #ifdef BUTTON
@@ -128,6 +130,7 @@ void Button(void) {
 void setup() {
 
 	Serial.begin(115200);
+
 #ifdef BUTTON
 	pinMode(BUTTON_PIN, INPUT_PULLUP);
 #endif
@@ -137,7 +140,7 @@ void setup() {
 #else
 #include <WiFiManager.h>
   WiFiManager wifiManager;
-//   //wifiManager.resetSettings();
+  //wifiManager.resetSettings();
 #ifdef IP_STATIC
   wifiManager.setSTAStaticIPConfig(IPadr, netmask, gateway);
 #endif
@@ -163,7 +166,7 @@ void loop() {
 		led.setOn(); // włącz LED gdy nie jest połączenie z WiFi
 		aptime = fminutes(apminutes);  // licz czas trwania AP po połaczeniu
 	} else {
-		if (aptime <= millis()){  // gdy minął czas twania AP przełącz na STATION
+		if (aptime <= millis()){  // gdy minął czas trwania AP przełącz na STATION
 		WiFi.mode(WIFI_STA); //tryb STATION
 		}
 		led.setOff(); // wyłącz LED gdy jest połączenie z WiFi
